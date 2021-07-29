@@ -1,0 +1,17 @@
+ALGORITHM insertion_sort
+VAR
+   i, j, n, aux:INTEGER; 
+   set: ARRAY_OF INTEGER[n];
+BEGIN
+    i=1;
+    WHILE (i<n) DO
+        j=i-1;
+        aux=set[i];
+        WHILE (j>=0 && set[j]>aux) DO
+            set[j+1]=set[j];
+            j=j-1;
+        END_WHILE
+            set[j+1]=aux;
+            i=i+1;
+    END_WHILE
+END
